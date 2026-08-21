@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books WebScraper</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="layout-wrapper">
+        <!-- Control Panel Sidebar -->
+        <div class="sidebar">
+            <h2>DASHBOARD</h2>
+            <p>Select a category, navigate pages, and trigger live scraping directly from the browser.</p>
+            <h2>Enjoy Reading!</h2>
+            <label for="categorySelect" class="sidebar-label">Category</label>
+            <select id="categorySelect" class="category-select"></select>
+            <div class="pagination-controls">
+                <button id="prevPageBtn" class="btn-page">← Prev</button>
+                <span id="pageIndicator">Page 1</span>
+                <button id="nextPageBtn" class="btn-page">Next →</button>
+            </div>
+            <button id="scrapeBtn" class="btn-scrape">🚀 Run Web Scraper</button>
+            <button id="downloadCsvBtn" class="btn-download">⬇️ Download CSV file</button>
+            <div id="statusIndicator" class="status-text">System Ready</div>
+        </div>
+
+        <!-- Main Analytics Window -->
+        <div class="main-panel">
+            <h1>Welcome to Book Scraper</h1>
+            <h3>Sleep is good, but books are better</h3>
+            <div class="card">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Book Title</th>
+                            <th>Price (USD)</th>
+                            <th>Stock</th>
+                        </tr>
+                    </thead>
+                    <tbody id="dataGrid">
+                        <!-- Content dynamically appended here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="/static/app.js"></script>
+</body>
+</html>
